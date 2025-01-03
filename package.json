@@ -1,0 +1,27 @@
+{
+  "name": "draxen-ai",
+  "version": "1.0.0",
+  "description": "The first Moroccan AI assistant",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build"
+  },
+  "workspaces": [
+    "server",
+    "client",
+    "shared"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}
